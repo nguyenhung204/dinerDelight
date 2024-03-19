@@ -1,0 +1,129 @@
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* Advertise */
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.container-lg{
+    margin-top: 80px;
+}
+
+.carousel-button {
+    padding: 5px 40px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #f0f0f0;
+    border: 2px solid white;
+    opacity: 1;
+}
+
+.carousel-button:hover {
+    background-color: #f0f0f0;
+    color: #000000;
+    transition: ease;
+    border: 2px solid #000000;
+}
+
+/* Content */
+.content-left {
+    margin-top: 30px;
+}
+
+.content-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.content-text {
+    font-size: 14px;
+    color: #7b7979;
+}
+
+.content-link {
+    color: #7b7979;
+    border-bottom: 2px solid #7b7979;
+}
+
+.content-link:hover {
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+/* Orther */
+
+.orther {
+    margin-top: 40px;
+}
+
+/* Brand-item */
+.brands-items {
+    border-right: 2px solid #f0f0f0;
+}
+
+.item-label {
+    font-weight: 500;
+}
+
+.item-logo {
+    padding: 10px;
+    display: flex;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.img-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+/* Dowload */
+.download-content {
+    margin-top: 50px;
+}
+
+.download-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.download-list {
+    text-align: center;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.download-img {
+    margin-left: 50px;
+}
+
+.dowload-text {
+    font-size: 15px;
+    color: #7b7979;
+    text-align: center;
+}
+
+/* footer */
+.footer {
+    background-color: rgba(35, 31, 32);
+    padding: 40px 197px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-top,
+.f-right-content {
+    color: white;
+}
+
+.f-bottom {
+    color: #7b7979;
+}
