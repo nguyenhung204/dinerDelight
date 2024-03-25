@@ -85,7 +85,7 @@ script.onload = function(){
   $(document).ready(() => {
     let isClicked = false;
     $("#abs-to-sub-item").click(() => {
-        isClicked = !isClicked;
+        isClicked = !isClicked; 
         console.log("Clicked")
         if (isClicked) {
             $("#ar-left").show();

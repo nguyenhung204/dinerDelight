@@ -1,0 +1,22 @@
+#header{
+    position: relative;
+}
+#foods-container{
+    position: absolute;
+    width: 70%;
+    top: 15%;
+    left: 30%;
+    display: flex;
+    flex-direction: row;
+
+    
+}
+#foods-container .card {
+    flex: 0 0 auto;
+    margin: 10px; /* Adjust as needed */
+}
+#foods-container .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
