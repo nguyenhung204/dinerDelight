@@ -15,7 +15,7 @@ const db = getFirestore();
 
 
 async function fetchData() {
-  const docRef = collection(db, "menu");
+  const docRef = collection(db, "khai vi");
   let fooditems = "";
   const querySnapshot = await getDocs(docRef);
   querySnapshot.forEach((doc) => {
@@ -27,7 +27,24 @@ async function fetchData() {
   document.getElementById("foods-container").innerHTML = fooditems;
   console.log(fooditems);
 }
-fetchData();
+
+async function fetchDataBo() {
+  const docRef = collection(db, "Bò");
+  let fooditems = "";
+  const querySnapshot = await getDocs(docRef);
+  querySnapshot.forEach((doc) => {
+    const item = doc.data();
+    fooditems += renderFoodCard(item.name, item.price, item.img);
+    console.log(doc.id, " => ", doc.data());
+  });
+  console.log(querySnapshot);
+  document.getElementById("foods-container").innerHTML = fooditems;
+  console.log(fooditems);
+}
+//  fetchDataBo();   
+
+
+ fetchData();
 
 
 

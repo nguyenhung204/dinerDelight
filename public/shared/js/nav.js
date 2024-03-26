@@ -1,6 +1,6 @@
 
-function renderMenu() {
-    const menuStr = `
+function renderNavBar() {
+    const navBarStr = `
     <div class="wrapper">
     <div class="absolute-menu" id="absolute-menu">
       <div class="close-icon" id="close-icon">
@@ -40,7 +40,7 @@ function renderMenu() {
           <p class="abs-i-name">Ưu Đãi</p>
         </a>
         <a href="../../pages/table/index.html" class="abs-menu-item">
-          <p class="abs-i-name">Đặt Món</p>
+          <p class="abs-i-name">Đặt Bàn</p>
         </a>
         <a href="../../pages/home/index.html" class="abs-menu-item">
           <p class="abs-i-name">Về Chúng Tôi</p>
@@ -58,7 +58,7 @@ function renderMenu() {
       <div class="menu-list" id="menu-list">
         <a href="../../pages/sale/index.html" class="menu-item"> <p class="i-name">Ưu Đãi</p> </a>
         <a href="../../pages/menu/index.html" class="menu-item"> <p class="i-name">Thực Đơn</p> </a>
-        <a href="../../pages/table/index.html" class="menu-item"> <p class="i-name">Đặt Món</p> </a>
+        <a href="../../pages/table/index.html" class="menu-item"> <p class="i-name">Đặt Bàn</p> </a>
       </div>
       <div class="nav-interact">
         <div class="user-nav">
@@ -75,7 +75,7 @@ function renderMenu() {
 
     const header = document.getElementById("header");
     if (header) {
-        header.innerHTML = menuStr;
+        header.innerHTML = navBarStr;
     }
 }
 const script = document.createElement('script');
@@ -108,5 +108,49 @@ script.onload = function(){
     })
 })
 }
+
+function renderMenu() {
+    const menuStr = `
+    <div class="container-fluid">
+        <div class="row d-flex d-md-block flex-nowrap wrapper">
+            <div class="col-md-3 col-1 pl-0 pr-0 collapse width show" id="sidebar">
+                    <div class="list-group border-0 card text-center text-md-left">
+                    <a href="#menu1" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+            
+                         <span class="d-none d-md-inline ">Gọi Món</span> </i> </a>
+                    <div class="collapse" id="menu1">
+                        <a href="#" class="list-group-item" data-parent="#menu1">Khai Vị</a>
+                        <a href="#" class="list-group-item" data-parent="#menu1">Thịt Bò</a>
+                        <a href="#" class="list-group-item" data-parent="#menu1">Thịt Heo</a>
+                        <a href="#" class="list-group-item" data-parent="#menu1">Hải Sản</a>
+                        <a href="#" class="list-group-item" data-parent="#menu1">Tráng Miệng</a>
+                        <a href="#" class="list-group-item" data-parent="#menu1">Rượu Vang</a>
+                    </div>
+                        <a href="#menu2" class="list-group-item" data-toggle="collapse" data-parent="#sidebar"> 
+                        <span class="d-none d-md-inline">Buffet</span></a>
+                            
+                        <a href="#menu3" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+                         <span class="d-none d-md-inline">Combo</span></a>
+                        <div class="collapse" id="menu3">
+                        <a href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</a>
+                        <a href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</a>
+                        <a href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</a>
+                        <a href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</a>
+                        <a href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</a> 
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    `;
+
+    const menu = document.getElementById("food-menu");
+    if (menu) {
+        menu.innerHTML = menuStr;
+    }
+}
+
+renderNavBar();
 
 renderMenu();
