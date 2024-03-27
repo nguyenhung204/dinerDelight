@@ -209,7 +209,7 @@
     display: flex;
     justify-content: center;
     align-items: self-start;
-    padding: 7rem 0rem 1rem 0rem;
+    padding: 0rem 0rem 1rem 0rem;
   }
   
   .deal-list {
@@ -259,7 +259,7 @@
   }
   
   .deal-img-field:hover > .deal-img {
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
   
   .deal-info {
@@ -268,7 +268,6 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-    gap: 1rem;
   }
   
   .deal-name {
@@ -325,6 +324,9 @@
     cursor: pointer;
     transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
   }
+  .deal-btn a{
+    text-decoration: none;
+    color: var(--bg-color);}
   
   .deal-btn:hover {
     opacity: 0.9;

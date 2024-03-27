@@ -56,7 +56,7 @@ function renderNavBar() {
         <img src="../../assets/Diner Delight-logos.jpeg" alt="image" class="logo" />
       </div>
       <div class="menu-list" id="menu-list">
-        <a href="../../pages/sale/index.html" class="menu-item"> <p class="i-name">Ưu Đãi</p> </a>
+        <a href="../../pages/sale/index.html" class="menu-item"> <p class="i-name">Ưu Đãi</p></a>
         <a href="../../pages/menu/index.html" class="menu-item"> <p class="i-name">Thực Đơn</p> </a>
         <a href="../../pages/table/index.html" class="menu-item"> <p class="i-name">Đặt Bàn</p> </a>
       </div>
@@ -119,7 +119,7 @@ function renderMenu() {
             
                          <span class="d-none d-md-inline ">Gọi Món</span> </i> </a>
                     <div class="collapse" id="menu1">
-                        <a href="#" class="list-group-item" data-parent="#menu1">Khai Vị</a>
+                        <a href="#" class="list-group-item" id ="Khaivi" data-parent="#menu1">Khai Vị</a>
                         <a href="#" class="list-group-item" data-parent="#menu1">Thịt Bò</a>
                         <a href="#" class="list-group-item" data-parent="#menu1">Thịt Heo</a>
                         <a href="#" class="list-group-item" data-parent="#menu1">Hải Sản</a>
@@ -149,6 +149,8 @@ function renderMenu() {
     if (menu) {
         menu.innerHTML = menuStr;
     }
+
+
 }
 
 renderNavBar();

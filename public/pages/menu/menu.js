@@ -14,8 +14,10 @@ import { getFirestore, collection, getDocs } from "https://www.gstatic.com/fireb
 const db = getFirestore();
 
 
-async function fetchData() {
-  const docRef = collection(db, "khai vi");
+
+
+async function fetchDataKhaiVi() {
+  const docRef = collection(db, "khai vị");
   let fooditems = "";
   const querySnapshot = await getDocs(docRef);
   querySnapshot.forEach((doc) => {
@@ -23,29 +25,16 @@ async function fetchData() {
     fooditems += renderFoodCard(item.name, item.price, item.img);
     console.log(doc.id, " => ", doc.data());
   });
-  console.log(querySnapshot);
-  document.getElementById("foods-container").innerHTML = fooditems;
-  console.log(fooditems);
+  
 }
+  const khaivi = document.querySelector('#khaivi');
 
-async function fetchDataBo() {
-  const docRef = collection(db, "Bò");
-  let fooditems = "";
-  const querySnapshot = await getDocs(docRef);
-  querySnapshot.forEach((doc) => {
-    const item = doc.data();
-    fooditems += renderFoodCard(item.name, item.price, item.img);
-    console.log(doc.id, " => ", doc.data());
-  });
-  console.log(querySnapshot);
-  document.getElementById("foods-container").innerHTML = fooditems;
-  console.log(fooditems);
-}
-//  fetchDataBo();   
-
-
- fetchData();
-
+   khaivi.addEventListener('click', function(){
+    fetchDataKhaiVi();
+    document.getElementById('foods-container').innerHTML = "fooditems";
+  }
+  );
+   
 
 
 
