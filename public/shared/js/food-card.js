@@ -1,7 +1,7 @@
 
 function renderFoodCard(name, price, img) {
   const foodCard = `<div class="card" style="width: 18rem;">
-  <img src="${img}" class="card-img-top img-fluid" alt="...">
+  <img id="diff" src="${img}" class="card-img-top img-fluid" alt="...">
   <div class="card-body">
     <h5 class="card-title">${name}</h5>
     <p class="card-text">${price}</p>

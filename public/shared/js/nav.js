@@ -119,12 +119,12 @@ function renderMenu() {
             
                          <span class="d-none d-md-inline ">Gọi Món</span> </i> </a>
                     <div class="collapse" id="menu1">
-                        <a href="#" class="list-group-item" id ="Khaivi" data-parent="#menu1">Khai Vị</a>
-                        <a href="#" class="list-group-item" data-parent="#menu1">Thịt Bò</a>
-                        <a href="#" class="list-group-item" data-parent="#menu1">Thịt Heo</a>
-                        <a href="#" class="list-group-item" data-parent="#menu1">Hải Sản</a>
-                        <a href="#" class="list-group-item" data-parent="#menu1">Tráng Miệng</a>
-                        <a href="#" class="list-group-item" data-parent="#menu1">Rượu Vang</a>
+                        <li  href="#" class="list-group-item" id ="starter" data-parent="#menu1">Khai Vị</li>
+                        <li href="#" class="list-group-item" id ="beef" data-parent="#menu1">Thịt Bò</li>
+                        <li href="#" class="list-group-item" id ="pork" data-parent="#menu1">Thịt Heo</li>
+                        <li href="#" class="list-group-item" id ="seaFood" data-parent="#menu1">Hải Sản</li>
+                        <li href="#" class="list-group-item" id ="dessert" data-parent="#menu1">Tráng Miệng</li>
+                        <li href="#" class="list-group-item" id ="wine" data-parent="#menu1">Rượu Vang</li>
                     </div>
                         <a href="#menu2" class="list-group-item" data-toggle="collapse" data-parent="#sidebar"> 
                         <span class="d-none d-md-inline">Buffet</span></a>
@@ -132,11 +132,11 @@ function renderMenu() {
                         <a href="#menu3" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
                          <span class="d-none d-md-inline">Combo</span></a>
                         <div class="collapse" id="menu3">
-                        <a href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</a>
-                        <a href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</a>
-                        <a href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</a>
-                        <a href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</a>
-                        <a href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</a> 
+                        <li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
+                        <li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
+                        <li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
+                        <li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
+                        <li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li> 
                     </div>
                 </div>
             </div>
