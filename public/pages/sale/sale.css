@@ -6,14 +6,13 @@
   
 .container{
     margin-top:5%;
+    justify-content: center;
 }
-.wrapper {
-    padding-bottom: 5rem;
-  }
+
   
 .slider {
-    margin-top: 3rem;
-    width: 100%;
+    margin: auto;
+    width: 65%;
     height: 24rem;
     overflow: hidden;
   }
@@ -29,7 +28,7 @@
   
   .card {
     margin: 0rem 1.5rem;
-    width: 50%;
+    width: 30%;
     max-height: 14rem;
     aspect-ratio: 1.7;
     overflow: hidden;
@@ -45,9 +44,9 @@
   }
   
   .info-card {
-    font-size: smaller;
+    font-size: medium;
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 600;
     opacity: 0.8;
   }
   

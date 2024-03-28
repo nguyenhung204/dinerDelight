@@ -45,15 +45,12 @@ function renderNavBar() {
         <a href="../../pages/home/index.html" class="abs-menu-item">
           <p class="abs-i-name">Về Chúng Tôi</p>
         </a>
-        <a href="##" class="abs-menu-item">
-          <p class="abs-i-name">Tin Tức</p>
-        </a>
       </div>
     </div>
     <!--  -->
     <nav class="navigation">
       <div class="nav-list">
-        <img src="../../assets/logo.jpg" alt="image" class="logo" />
+        <img src="../../assets/" alt="image" class="logo" />
       </div>
       <div class="menu-list" id="menu-list">
         <a href="../../pages/sale/index.html" class="menu-item"> <p class="i-name">Ưu Đãi</p></a>

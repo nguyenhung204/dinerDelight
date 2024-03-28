@@ -47,6 +47,17 @@ async function fetchDataStater() {
         document.getElementById('foods-container').innerHTML = fooditems;
       });
     }
+    async function fetchDataSeaFood() {
+      const docRef = collection(db, "haiSan");
+      let fooditems = "";
+      const querySnapshot = await getDocs(docRef);
+      querySnapshot.forEach((doc) => {
+        const item = doc.data();
+        fooditems += renderFoodCard(item.name, item.price, item.img);
+        //console.log(doc.id, " => ", doc.data());
+        document.getElementById('foods-container').innerHTML = fooditems;
+      });
+    }
       async function fetchDataWine() {
         const docRef = collection(db, "wine");
         let fooditems = "";
@@ -72,6 +83,7 @@ async function fetchDataStater() {
   const starter = document.querySelector('#starter');
   const beef = document.querySelector('#beef');
   const pork = document.querySelector('#pork');
+  const seafood = document.querySelector('#seaFood');
   const wine = document.querySelector('#wine');
   const dessert = document.querySelector('#dessert');
 
@@ -85,6 +97,9 @@ async function fetchDataStater() {
   });
   pork.addEventListener('click', function(){
     fetchDataPork();
+  });
+  seafood.addEventListener('click', function(){
+    fetchDataSeaFood();
   });
   wine.addEventListener('click', function(){
     fetchDataWine();
