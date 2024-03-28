@@ -92,7 +92,13 @@ async function fetchDataStater() {
   dessert.addEventListener('click', function(){
     fetchDataDesert();
   });
+
   fetchDataStater();
+
+
+  
+  
+  
    
 
 

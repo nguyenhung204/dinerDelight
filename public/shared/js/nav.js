@@ -1,6 +1,6 @@
 
 function renderNavBar() {
-    const navBarStr = `
+  const navBarStr = `
     <div class="wrapper">
     <div class="absolute-menu" id="absolute-menu">
       <div class="close-icon" id="close-icon">
@@ -53,7 +53,7 @@ function renderNavBar() {
     <!--  -->
     <nav class="navigation">
       <div class="nav-list">
-        <img src="../../assets/Diner Delight-logos.jpeg" alt="image" class="logo" />
+        <img src="../../assets/logo.jpg" alt="image" class="logo" />
       </div>
       <div class="menu-list" id="menu-list">
         <a href="../../pages/sale/index.html" class="menu-item"> <p class="i-name">Ưu Đãi</p></a>
@@ -73,44 +73,44 @@ function renderNavBar() {
   </div>
     `;
 
-    const header = document.getElementById("header");
-    if (header) {
-        header.innerHTML = navBarStr;
-    }
+  const header = document.getElementById("header");
+  if (header) {
+    header.innerHTML = navBarStr;
+  }
 }
 const script = document.createElement('script');
 script.src = 'https://code.jquery.com/jquery-3.7.1.js';
 document.head.appendChild(script);
-script.onload = function(){
+script.onload = function () {
   $(document).ready(() => {
     let isClicked = false;
     $("#abs-to-sub-item").click(() => {
-        isClicked = !isClicked; 
-        console.log("Clicked")
-        if (isClicked) {
-            $("#ar-left").show();
-            $("#ar-right").hide();
-            $("#sub-menu-list").show();
-        } else {
-            $("#ar-left").hide();
-            $("#ar-right").show();
-            $("#sub-menu-list").hide();
-        }
+      isClicked = !isClicked;
+      console.log("Clicked")
+      if (isClicked) {
+        $("#ar-left").show();
+        $("#ar-right").hide();
+        $("#sub-menu-list").show();
+      } else {
+        $("#ar-left").hide();
+        $("#ar-right").show();
+        $("#sub-menu-list").hide();
+      }
     })
 
     $("#close-icon").click(() => {
-        console.log("Clicked icon")
-        $("#absolute-menu").css("display", "none");
+      console.log("Clicked icon")
+      $("#absolute-menu").css("display", "none");
     })
     $("#toggle-nav").click(() => {
-        console.log("Clicked icon")
-        $("#absolute-menu").css("display", "flex");
+      console.log("Clicked icon")
+      $("#absolute-menu").css("display", "flex");
     })
-})
+  })
 }
 
 function renderMenu() {
-    const menuStr = `
+  const menuStr = `
     <div class="container-fluid">
         <div class="row d-flex d-md-block flex-nowrap wrapper">
             <div class="col-md-3 col-1 pl-0 pr-0 collapse width show" id="sidebar">
@@ -145,14 +145,33 @@ function renderMenu() {
     </div>
     `;
 
-    const menu = document.getElementById("food-menu");
-    if (menu) {
-        menu.innerHTML = menuStr;
-    }
+  const menu = document.getElementById("food-menu");
+  if (menu) {
+    menu.innerHTML = menuStr;
+  }
 
 
 }
+function footer() {
+  const footerStr = ` <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__content--l">
+                <p class="f-top">CÔNG TY CỔ PHẦN TẬP ĐOÀN GOLDEN GATE</p>
+                <p class="f-bottom">Trụ sở chính: 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành Phố Hồ Chí Minh <br>
+                    GPĐK: 0102721242 cấp ngày 01/01/20024 <br>
+                    ĐT:0962 394 267 Email:dinerDelight@gmail.com.vn</p>
+            </div>
+            <div class="footer__content--r">
+                <p class="f-right-content">© 2024 Golden Gate ., JSC. All rights reserved</p>
+            </div>
+        </div>
+    </footer>`;
+  const footer = document.getElementById("footer");
+  if (footer) {
+    footer.innerHTML = footerStr;
+  }
 
+}
+footer();
 renderNavBar();
-
 renderMenu();

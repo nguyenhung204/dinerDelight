@@ -1,3 +1,5 @@
+/* nav styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -203,7 +205,7 @@
     display: none;
   }
   
-  /* body */
+  /* card sale styles */
   .deal-container {
     width: 100%;
     display: flex;
@@ -347,6 +349,25 @@
     border: none;
     border-radius: 5px;
   }
+  /* footer */
+  .footer {
+    background-color: rgba(35, 31, 32);
+    padding: 40px 197px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-top,
+.f-right-content {
+    color: white;
+}
+
+.f-bottom {
+    color: #7b7979;
+}
   
   @media screen and (min-width: 1024px) {
     .deal-item {

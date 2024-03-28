@@ -1,7 +1,7 @@
 
 function renderFoodCard(name, price, img) {
   const foodCard = `<div class="card" style="width: 18rem;">
-  <img id="diff" src="${img}" class="card-img-top img-fluid" alt="...">
+  <img class = "lazy" src="${img}" class="card-img-top img-fluid" alt="...">
   <div class="card-body">
     <h5 class="card-title">${name}</h5>
     <p class="card-text">${price}</p>
@@ -10,6 +10,40 @@ function renderFoodCard(name, price, img) {
   
   return foodCard;
 }
+//lazy load
+document.addEventListener("DOMContentLoaded", function() {
+  let lazyloadImages = document.querySelectorAll("img.lazy");    
+  let lazyloadThrottleTimeout;
+  
+  function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        let scrollTop = window.pageYOffset;
+        console.log(scrollTop);
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+    }, 20);
+    console.log(lazyloadImages.length);
+
+    console.log(lazyloadImages);
+  }
+  document.addEventListener("scroll", lazyload);
+  window.addEventListener("resize", lazyload);
+  window.addEventListener("orientationChange", lazyload);
+});
+
 function renderCardSale(img,dname,fdate, ldate){
    const dealString = `<div class="deal-container">
         <div class="deal-list">
