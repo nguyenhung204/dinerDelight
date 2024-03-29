@@ -26,7 +26,7 @@
     padding: 1rem 8rem 1rem 8rem;
     max-height: 5rem;
     z-index: 9998;
-    box-shadow: -5px 0px 5px 5px var(--black);
+    box-shadow: -3px 0px 3px 3px var(--black);
     background-color: var(--white-color);
   }
   
@@ -58,7 +58,8 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    padding: 1.26rem 1.43rem 1.26rem 1.43rem;
+    padding: 1.26rem 2rem 1.26rem 2rem;
+    margin: 0rem 2rem ;
   }
   
   .i-name {
@@ -207,44 +208,42 @@
   
   /* card sale styles */
   .deal-container {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: self-start;
-    padding: 0rem 0rem 1rem 0rem;
   }
-  
   .deal-list {
+    max-height: 18rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     max-width: 550px;
     flex-shrink: 0;
   }
   
   .deal-item:first-child {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
   
   .deal-item:last-child {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
   
   .deal-item {
     width: 90%;
     aspect-ratio: 1;
     overflow: hidden;
-  
     display: grid;
     grid-template-rows: 1fr 1fr;
   }
   
   .deal-img-field {
     width: 100%;
-    height: 100%;
+    height: 80%;
     overflow: hidden;
     cursor: pointer;
     display: flex;
@@ -268,7 +267,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     overflow: hidden;
-    height: 100%;
+    height: 80%;
     width: 100%;
   }
   

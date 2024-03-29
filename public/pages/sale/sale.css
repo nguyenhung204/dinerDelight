@@ -6,9 +6,17 @@
   
 .container{
     margin-top:5%;
-    justify-content: center;
+    width: 100%;
 }
+#sales-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
 
+}
   
 .slider {
     margin: auto;

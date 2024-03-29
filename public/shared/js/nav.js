@@ -42,6 +42,9 @@ function renderNavBar() {
         <a href="../../pages/table/index.html" class="abs-menu-item">
           <p class="abs-i-name">Đặt Bàn</p>
         </a>
+        <a href="https://gdeli.vn/brand/7" class="abs-menu-item">
+          <p class="abs-i-name">Giao Hàng</p>
+        </a>
         <a href="../../pages/home/index.html" class="abs-menu-item">
           <p class="abs-i-name">Về Chúng Tôi</p>
         </a>
@@ -57,10 +60,6 @@ function renderNavBar() {
         <a href="../../pages/menu/index.html" class="menu-item"> <p class="i-name">Thực Đơn</p> </a>
         <a href="../../pages/table/index.html" class="menu-item"> <p class="i-name">Đặt Bàn</p> </a>
       </div>
-      <div class="nav-interact">
-        <div class="user-nav">
-          <i class="fa-regular fa-user fa-xl"></i>
-        </div>
         <div class="toggle-nav" id="toggle-nav">
           <i class="fa-solid fa-bars fa-xl"></i>
         </div>
