@@ -81,7 +81,7 @@ function renderCardSale(img,dname,fdate, ldate){
               </div>
               <div class="deal-button-list">
                 <button type="button" id="deal-btn" class="deal-btn">
-                  <p class="db-name">Xem chi tiết</p>
+                  <a href ="../../pages/saledetail" class="db-name">Xem chi tiết</a>
                 </button>
                 <button type="button" id="deal-btn" class="deal-btn">
                   <a href ="../../pages/login" class="db-name">Nhận mã ngay</a>
