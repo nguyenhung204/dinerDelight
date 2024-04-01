@@ -14,6 +14,7 @@ import { getFirestore, collection, getDocs } from "https://www.gstatic.com/fireb
 const db = getFirestore();
 
 
+
 async function fetchDataStater() {
   const docRef = collection(db, "khai vị");
   let fooditems = "";
@@ -109,6 +110,7 @@ async function fetchDataStater() {
   });
 
   fetchDataStater();
+
 
 
   
