@@ -1,19 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 ::selection {
     background-color: gray;
 }
-
 .container {
-    width: 100%;
+    height: 80vh;
     margin:auto;
     margin-top: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .form {
-    margin-top: 150px;
-    width: 400px;
+    width: 800px;
     background-image: linear-gradient(to bottom, #ffffffd7, #ffffff11);
     display: flex;
     align-items: center;
@@ -23,7 +27,7 @@
 }
 
 .title {
-    color: 151717;
+    color: var(--black);
     margin: 3rem 0;
     font-size: 2rem;
 }
@@ -44,8 +48,8 @@
 }
 
 .username:hover {
-    background-color: #2d79f3;
-    border: none;
+    background-color:var(primary-color);
+    border: solid thin;
     border-radius: 0.5rem;
 }
 
@@ -55,8 +59,8 @@
 }
 
 .password:hover {
-    background-color: #2d79f3;
-    border: none;
+    background-color:var(primary-color);
+    border: solid thin;
     border-radius: 0.5rem;
 }
 
