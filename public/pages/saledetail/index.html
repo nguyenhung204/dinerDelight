@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaleDetail</title>
+    <link rel="stylesheet" href="saledetail.css" />
+    <link rel="stylesheet" href="../../shared/css/variables.css">
+    <link rel="stylesheet" href="../../shared/css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div class="container">
+      <div class="deal-container">
+        <div class="deal-list">
+          <div class="deal-item deal-item-detail">
+            <div class="deal-img-field">
+              <img
+                src="../../assets/saledetail.jpg"
+                alt="image"
+                class="deal-img"
+              />
+            </div>
+
+            <div class="deal-detail-info">
+              <div class="deal-name">
+                <p class="d-name">
+                  COUPON
+                </p>
+              </div>
+              <div class="deal-detail">
+                <div class="detail-row">
+                  <div class="detail-info">
+                    <p class="d-info">Kết thúc sau</p>
+                  </div>
+                  <div class="detail-info">
+                    <p class="d-info" id="time-end">00:00:00</p>
+                  </div>
+                </div>
+
+                <div class="detail-row">
+                  <div class="detail-info">
+                    <p class="d-info">Áp dụng</p>
+                  </div>
+
+                  <div class="detail-info">
+                    <p class="d-info">01/04/2024</p>
+                  </div>
+                </div>
+
+                <div class="detail-row">
+                  <div class="detail-info">
+                    <p class="d-info">Hết hạn sau</p>
+                  </div>
+                  <div class="detail-info">
+                    <p class="d-info">249 ngày</p>
+                  </div>
+                </div>
+              </div>
+              <div class="deal-button-list-detail">
+                <button
+                  type="button"
+                  id="deal-btn"
+                  class="deal-btn deal-btn-detail"
+                >
+                  <p class="db-name">Nhận mã ngay</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+          <!-- detail -->
+          <div class="detail-content">
+            <span class="title-detail"> Nội dung chương trình </span>
+            <p class="info-detail">
+              Được áp dụng tại toàn bộ hệ thống nhà hàng Golden Gate, đặt hàng trên app Golden SpoonS và qua dịch vụ GDeli.vn toàn quốc (Không áp dụng đối với nhãn hàng iCook, Yu Tang, Universal Tea, iPhở, Flychef).
+              <br>
+
+              - Được áp dụng song song với các ưu đãi mặc định cho thành viên như: tích lũy nâng hạng, ưu đãi đoàn đông, ưu đãi sinh nhật.
+              <br>
+              - Được áp dụng song song với các coupon được quy đổi trên app Golden SpoonS.
+              <br>
+              - Sau khi sử dụng coupon có trên app, khách hàng thành viên vẫn được tích lũy nâng hạng và tích lũy G-coin (tích ví) dựa trên số tiền khách hàng thực trả sau khi giảm trừ coupon.
+              <br>
+              - Chương trình sẽ hết hạn sau 30 ngày kể từ ngày đổi ưu đãi.
+              <br>
+              - Giá trị giảm trừ trước thuế VAT.
+              <br>
+              - Hạn mức thanh toán tối đa 50% giá trị hóa đơn, không hoàn lại tiền thừa.
+              <br>
+              - Không xuất hóa đơn đỏ phần coupon, chỉ xuất hóa đơn đỏ tiền thực tế khách hàng trả.
+            </p>
+        </div>
+
+            <div class="slider">
+              <div class="slider-card-list">
+                <div class="card">
+                  <div class="info-card">
+                    <p> Món ăn rất chất lượng, giá cả hợp lý, phục vụ nhanh chóng, nhân
+                        viên thân thiện. Mình rất thích quán này, sẽ quay lại lần sau.</p>
+                  </div>
+                  <div class="profile">
+                    <div class="pro-image">
+                      <img
+                        class="img-pro"
+                        src="../../assets/tranthanh.jpg"
+                        alt="image"
+                      />
+                    </div>
+                    <div class="per-info">
+                      <span class="per-name">Trấn Thành</span>
+                      <span class="per-position">Diễn viên - Nghệ sĩ hài</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="info-card">
+                    <p>
+                      Không gian quán rất sang trọng, giá cả hợp lý, nhân viên 
+                      vui vẻ, tư vấn món ăn rất nhiệt tình và chu đáo.
+                      Chưa bao giờ mình thấy các món ăn làm mình hài lòng như vậy.
+                      Mình sẽ còn quay lại nhiều lần nữa.
+                    </p>
+                  </div>
+                  <div class="profile">
+                    <div class="pro-image">
+                      <img
+                        class="img-pro"
+                        src="../../assets/truong.jpg"
+                        alt="image"
+                      />
+                    </div>
+                    <div class="per-info">
+                      <span class="per-name">Nguyễn Hùng</span>
+                      <span class="per-position">Sinh Viên</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="info-card">
+                    <p>
+                      Nhà hàng của học trò cưng, hoàn toàn hài lòng về chất lượng. Ngoài ra còn có rất nhiều món ngon
+                    </p>
+                  </div>
+                  <div class="profile">
+                    <div class="pro-image">
+                      <img
+                        class="img-pro"
+                        src="../../assets/co.jpg"
+                        alt="image"
+                      />
+                    </div>
+                    <div class="per-info">
+                      <span class="per-name">Cô Xuân Hiền</span>
+                      <span class="per-position">Giảng viên đại học</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="info-card">
+                    <p>
+                        Thực sự nên thử một lần, mình đã thử và rất hài lòng với dịch vụ của quán.
+                        Nhà hàng rất sạch sẽ, nhân viên thân thiện, món ăn ngon và giá cả hợp lý.
+                        Mình sẽ giới thiệu cho bạn bè và gia đình của mình.
+                    </p>
+                  </div>
+                  <div class="profile">
+                    <div class="pro-image">
+                      <img
+                        class="img-pro"
+                        src="../../assets/hanh.jpg"
+                        alt="image"
+                      />
+                    </div>
+                    <div class="per-info">
+                      <span class="per-name">Hạnh Thèm Ăn</span>
+                      <span class="per-position">Food Reviewer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dots">
+                <div class="dot" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+              </div>
+            </div>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+  <script src="saledetail.js"></script>
+  <script src="../../shared/js/food-card.js"></script>
+  <script src="../../shared/js/nav.js"></script>
+</html>
