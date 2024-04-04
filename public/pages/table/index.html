@@ -25,20 +25,94 @@
       crossorigin="anonymous"
     ></script>
     <script  src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
   </head>
   <body>
       <div id="header"></div>
-      <div class="card-container">
+      <div class="container">
+      <div class="card-map">
       <iframe id="map" src="https://storage.googleapis.com/maps-solutions-rnr89mul4m/locator-plus/zm2j/locator-plus.html"
          width="100%" height="100%"
-          style="border:4;"
+          style="border:1;" 
           loading="lazy"> 
         </iframe>
-
       </div>
+      <div class="card" style="width: 18rem;height: min-content;">
+        <div class="card-body">
+          <h5 class="card-title">Nhà Hàng Diner Delight</h5>
+          <p class="card-text">Địa Chỉ : 12, Nguyễn Văn Bảo, Phường 4, Gò Vấp</p>
+          <p class="card-text">Open - Close : 09:00 - 22:00</p>
+          <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalToggleLabel">Đặt Bàn</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Tên</label>
+                      <input type="text" class="form-control" id="name" placeholder="Nhập tên của bạn">
+                    </div>
+                    <div class="mb">
+                      <label for="phone" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Nhập email của bạn">
+                    </div>
+                    <label class="form-label">Số lượng người </label>
+                    <div class="mb d-flex">
+                      <div class="form-check m-2">
+                        <input class="form-check-input" type="radio" name="peopleCount" id="one" value="1">
+                        <label class="form-check-label" for="one">
+                          1
+                        </label>
+                      </div>
+                      <div class="form-check m-2">
+                        <input class="form-check-input" type="radio" name="peopleCount" id="two" value="2">
+                        <label class="form-check-label" for="two">
+                          2
+                        </label>
+                      </div>
+                      <!-- Add more options as needed -->
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="confirm">
+                      <label class="form-check-label" for="confirm">Tôi xác nhận thông tin trên là chính xác</label>
+                    </div>
+                    <div class="mb">
+                      <label for="message" class="form-label">Lời nhắn</label>
+                      <textarea class="form-control" id="message" rows="1"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Đặt Bàn</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Bạn đã đặt bàn thành công
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Đặt Bàn</a>
+        </div>
+      </div>
+    </div>
       <div id="footer"></div>
   <script src="../../shared/js/nav.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCevP3Z0E30qo_HaQgXPhj0oW7bk0ZasIk&libraries=places,marker&callback=initMap&solution_channel=GMP_QB_addressselection_v2_cABC"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCevP3Z0E30qo_HaQgXPhj0oW7bk0ZasIk,marker&callback=initMap&solution_channel=GMP_QB_addressselection_v2_cABC"></script>
     <script src="table.js"></script>
 </body>
 </html>
