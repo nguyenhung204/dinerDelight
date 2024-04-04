@@ -97,7 +97,6 @@
         $('.table_info').text('Loại bàn: ' + $('input[name="table"]:checked').val());
         $('.message_info').text('Ghi chú: ' + $('#message').val());
 
-        
     });
   });
 
