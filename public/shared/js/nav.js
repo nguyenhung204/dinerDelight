@@ -8,34 +8,17 @@ function renderNavBar() {
       </div>
       <div class="abs-menu-list" id="abs-menu-list">
         <a
-          href="##"
+          href="../../pages/menu/index.html"
           class="abs-menu-item abs-to-sub-item"
           id="abs-to-sub-item"
         >
           <div class="abs-item-name">
-            <div class="arrow-left" id="ar-left">
-              <i class="fa-solid fa-chevron-left"></i>
-            </div>
             <div class="item-title-name">
               <p class="abs-i-name">Thực Đơn</p>
             </div>
-            <div class="arrow-right" id="ar-right">
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
           </div>
         </a>
-        <!-- submenu -->
-        <div class="submenu-list" id="sub-menu-list">
-          <a href="##" class="sub-menu-item">
-            <p class="sub-i-name">Gọi Món</p>
-          </a>
-          <a href="##" class="sub-menu-item">
-            <p class="sub-i-name">Buffet</p>
-          </a>
-          <a href="##" class="sub-menu-item">
-            <p class="sub-i-name">Combo</p>
-          </a>
-        </div>
+    
         <a href="../../pages/sale/index.html" class="abs-menu-item">
           <p class="abs-i-name">Ưu Đãi</p>
         </a>
@@ -53,12 +36,13 @@ function renderNavBar() {
     <!--  -->
     <nav class="navigation">
       <div class="nav-list">
-        <img src="../../assets/" alt="image" class="logo" />
+      <a class="nav-list" href="../../pages/home/index.html"><img src="../../assets/hunglogo.png" alt="image" class="logo"/></a>
       </div>
       <div class="menu-list" id="menu-list">
         <a href="../../pages/sale/index.html" class="menu-item"> <p class="i-name">Ưu Đãi</p></a>
         <a href="../../pages/menu/index.html" class="menu-item"> <p class="i-name">Thực Đơn</p> </a>
         <a href="../../pages/table/index.html" class="menu-item"> <p class="i-name">Đặt Bàn</p> </a>
+        <a href="../../pages/login/index.html" class="menu-item"> <p class="i-name">Đăng Nhập</p> </a>
       </div>
         <div class="toggle-nav" id="toggle-nav">
           <i class="fa-solid fa-bars fa-xl"></i>
@@ -113,7 +97,7 @@ function renderMenu() {
                     <div class="list-group border-0 card text-center text-md-left">
                     <a href="#menu1" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
             
-                         <span class="d-none d-md-inline ">Gọi Món</span> </i> </a>
+                         <span class="d-none d-md-inline ">Danh Sách MENU</span> </i> </a>
                     <div class="collapse" id="menu1">
                         <li  href="#" class="list-group-item" id ="starter" data-parent="#menu1">Khai Vị</li>
                         <li href="#" class="list-group-item" id ="beef" data-parent="#menu1">Thịt Bò</li>
@@ -122,18 +106,7 @@ function renderMenu() {
                         <li href="#" class="list-group-item" id ="dessert" data-parent="#menu1">Tráng Miệng</li>
                         <li href="#" class="list-group-item" id ="wine" data-parent="#menu1">Rượu Vang</li>
                     </div>
-                        <a href="#menu2" class="list-group-item" data-toggle="collapse" data-parent="#sidebar"> 
-                        <span class="d-none d-md-inline">Buffet</span></a>
-                            
-                        <a href="#menu3" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
-                         <span class="d-none d-md-inline">Combo</span></a>
-                        <div class="collapse" id="menu3">
-                        <li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
-                        <li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
-                        <li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
-                        <li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
-                        <li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li> 
-                    </div>
+                    
                 </div>
             </div>
             
@@ -171,3 +144,70 @@ function footer() {
 footer();
 renderNavBar();
 renderMenu();
+// Lắng nghe sự kiện click trên tất cả các liên kết
+document.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const existingElement = document.getElementById('container-spinner'); // Thay thế bằng ID phần tử của bạn
+    if (existingElement) {
+      existingElement.style.display = 'block'; // Hiển thị phần tử
+    }
+    setTimeout(() => {
+      window.location.href = link.href; 
+      if (loadingElement) {
+        loadingElement.remove();
+      } else if (existingElement) {
+        existingElement.classList.remove('loading'); // Xóa lớp CSS để tạo kiểu (tùy chọn)
+        existingElement.style.display = 'none'; // Ẩn phần tử
+      }
+    }, 500); // Điều chỉnh độ trễ khi cần thiết (thay thế bằng thời gian tải thực tế nếu biết)
+  });
+});
+window.addEventListener('load', () => {
+  const loadingElement = document.querySelector('.loading');
+  if (loadingElement) {
+    loadingElement.remove();
+  }
+});
+
+
+
+
+
+
+
+
+
+
+//commit
+{/* <a href="#menu2" class="list-group-item" data-toggle="collapse" data-parent="#sidebar"> 
+<span class="d-none d-md-inline">Buffet</span></a>
+    
+<a href="#menu3" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+  <span class="d-none d-md-inline">Combo</span></a>
+<div class="collapse" id="menu3">
+<li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
+<li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
+<li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
+<li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li>
+<li href="#" class="list-group-item" data-parent="#menu3">Romantic French Dinner</li> 
+</div> */}
+
+
+
+{/* <div class="arrow-right" id="ar-right">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div> */}
+// <!-- submenu -->
+// <div class="submenu-list" id="sub-menu-list">
+//   <a href="##" class="sub-menu-item">
+//     <p class="sub-i-name">Gọi Món</p>
+//   </a>
+//   <a href="##" class="sub-menu-item">
+//     <p class="sub-i-name">Buffet</p>
+//   </a>
+//   <a href="##" class="sub-menu-item">
+//     <p class="sub-i-name">Combo</p>
+//   </a>
+// </div>

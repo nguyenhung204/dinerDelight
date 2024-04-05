@@ -118,6 +118,8 @@
   }
   
   .db-name {
+    text-decoration: none;
+    color: var(--primary-color);
     background-color: transparent;
     margin: 0;
   }
@@ -208,6 +210,7 @@
     }
   }
   .slider {
+    
     margin-top: 3rem;
     width: 100%;
     height: 24rem;
