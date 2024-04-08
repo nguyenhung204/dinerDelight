@@ -1,7 +1,7 @@
 // Initiate the table with the following code in the HTML file
   $('#name').on('input', function checkName() {
   let name = $(this).val();
-  let nameRegex = /^[A-Z][a-z]+( [A-Z][a-z]+)*$/;
+  const nameRegex = /^[A-ZÀ-Ỹa-ỹ\s]{5,20}$/;
 
   if (!nameRegex.test(name) ) {
       $("#nameHelp").text("Tên không hợp lệ");
@@ -81,14 +81,26 @@
     }
   });
 
+  $('#post').on('submit', function(e) {
+    e.preventDefault();
+    let name = $('#name').val(); console.log(name);
+    let email = $('#email').val(); console.log(email);
+    let idCard = $('#idCard').val(); console.log(idCard);
+    let phoneNumber = $('#phone').val(); console.log(phoneNumber);
+    if(name == "" || email == "" || idCard == "" || phoneNumber == "") {
+      alert("Vui lòng điền đầy đủ thông tin");
+      return;
+    }
+  });
+
   $(document).ready(function() {
     $('#post').on('submit', function(e) {
         e.preventDefault();
     
-        let name = $('#name').val(); console.log(name);
-        let email = $('#email').val(); console.log(email);
-        let idCard = $('#idCard').val(); console.log(idCard);
-        let phoneNumber = $('#phone').val(); console.log(phoneNumber);
+        let name = $('#name').val();
+        let email = $('#email').val(); 
+        let idCard = $('#idCard').val(); 
+        let phoneNumber = $('#phone').val(); 
   
         $('.name_info').text('Họ và tên: ' + name);
         $('.email_info').text('Email: ' + email);

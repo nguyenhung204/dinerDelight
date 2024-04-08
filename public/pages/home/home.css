@@ -10,7 +10,7 @@ a {
     height: 10px;
     border-radius: 50%;
 }
-.container-lg{
+.container-lg {
     margin-top: 80px;
 }
 
@@ -30,7 +30,15 @@ a {
     border: 2px solid #000000;
 }
 
+.carousel__img {
+    height: 500px;
+    object-fit: cover;
+}
+
 /* Content */
+.content {
+    margin-top: 30px;
+}
 .content-left {
     margin-top: 30px;
 }
@@ -54,6 +62,11 @@ a {
     color: blue;
     border-bottom: 2px solid blue;
 }
+
+.content_img {
+    height: 400px;
+    object-fit: cover;
+}
 /* Orther */
 
 .orther {
@@ -76,10 +89,21 @@ a {
 }
 
 .img-logo {
-    width: 50px;
-    height: 50px;
-    margin-right: 30px;
+    width: 60px;
+    height: 60px;
+    margin-right: 50px;
     margin-bottom: 10px;
+    filter: grayscale(1);
+    transition: ease 0.2s;
+}
+
+.img-logo:hover {
+    filter: grayscale(0);
+    scale: 1.2;
+}
+
+.img__logo-row {
+    width: 80px;
 }
 
 /* Dowload */

@@ -1,3 +1,22 @@
+function showLoading() {
+  let element = document.getElementById("loading-panel");
+    if (element) {
+        element.classList.remove("hidden");
+    }
+}
+function hideLoading() {
+    let element = document.getElementById("loading-panel");
+        if (element) {
+            element.classList.add("hidden");
+        }
+    }
+ function renderLoading() {
+    showLoading();
+    setTimeout(hideLoading, 1500);
+}
+renderLoading();
+
+
 
 function renderNavBar() {
   const navBarStr = `
@@ -20,16 +39,16 @@ function renderNavBar() {
         </a>
     
         <a href="../../pages/sale/index.html" class="abs-menu-item">
-          <p class="abs-i-name">Ưu Đãi</p>
+          <p class="abs-i-name">Ưu đãi</p>
         </a>
         <a href="../../pages/table/index.html" class="abs-menu-item">
-          <p class="abs-i-name">Đặt Bàn</p>
+          <p class="abs-i-name">Đặt bàn</p>
         </a>
         <a href="https://gdeli.vn/brand/7" class="abs-menu-item">
-          <p class="abs-i-name">Giao Hàng</p>
+          <p class="abs-i-name">Giao hàng</p>
         </a>
         <a href="../../pages/home/index.html" class="abs-menu-item">
-          <p class="abs-i-name">Về Chúng Tôi</p>
+          <p class="abs-i-name">Về chúng tôi</p>
         </a>
       </div>
     </div>
@@ -39,10 +58,10 @@ function renderNavBar() {
       <a class="nav-list" href="../../pages/home/index.html"><img src="../../assets/hunglogo.png" alt="image" class="logo"/></a>
       </div>
       <div class="menu-list" id="menu-list">
-        <a href="../../pages/sale/index.html" class="menu-item"> <p class="i-name">Ưu Đãi</p></a>
-        <a href="../../pages/menu/index.html" class="menu-item"> <p class="i-name">Thực Đơn</p> </a>
-        <a href="../../pages/table/index.html" class="menu-item"> <p class="i-name">Đặt Bàn</p> </a>
-        <a href="../../pages/login/index.html" class="menu-item"> <p class="i-name">Đăng Nhập</p> </a>
+        <a href="../../pages/sale/index.html" class="menu-item"> <p class="i-name">Ưu đãi</p></a>
+        <a href="../../pages/menu/index.html" class="menu-item"> <p class="i-name">Thực đơn</p> </a>
+        <a href="../../pages/table/index.html" class="menu-item"> <p class="i-name">Đặt đàn</p> </a>
+        <a href="../../pages/login/index.html" class="menu-item"> <p class="i-name">Đăng nhập</p> </a>
       </div>
         <div class="toggle-nav" id="toggle-nav">
           <i class="fa-solid fa-bars fa-xl"></i>
@@ -97,7 +116,7 @@ function renderMenu() {
                     <div class="list-group border-0 card text-center text-md-left">
                     <a href="#menu1" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
             
-                         <span class="d-none d-md-inline ">Danh Sách MENU</span> </i> </a>
+                         <span class="d-none d-md-inline ">MENU</span> </i> </a>
                     <div class="collapse" id="menu1">
                         <li  href="#" class="list-group-item" id ="starter" data-parent="#menu1">Khai Vị</li>
                         <li href="#" class="list-group-item" id ="beef" data-parent="#menu1">Thịt Bò</li>
@@ -144,40 +163,6 @@ function footer() {
 footer();
 renderNavBar();
 renderMenu();
-// Lắng nghe sự kiện click trên tất cả các liên kết
-document.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    const existingElement = document.getElementById('container-spinner'); // Thay thế bằng ID phần tử của bạn
-    if (existingElement) {
-      existingElement.style.display = 'block'; // Hiển thị phần tử
-    }
-    setTimeout(() => {
-      window.location.href = link.href; 
-      if (loadingElement) {
-        loadingElement.remove();
-      } else if (existingElement) {
-        existingElement.classList.remove('loading'); // Xóa lớp CSS để tạo kiểu (tùy chọn)
-        existingElement.style.display = 'none'; // Ẩn phần tử
-      }
-    }, 500); // Điều chỉnh độ trễ khi cần thiết (thay thế bằng thời gian tải thực tế nếu biết)
-  });
-});
-window.addEventListener('load', () => {
-  const loadingElement = document.querySelector('.loading');
-  if (loadingElement) {
-    loadingElement.remove();
-  }
-});
-
-
-
-
-
-
-
-
 
 
 //commit

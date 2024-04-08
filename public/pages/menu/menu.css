@@ -1,21 +1,27 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    color: #000000;
 
-#header {
-    background-color: #ffffff;
 }
+
 .container {
-    margin-top: 100px;
+    margin-top: 5%;
     position: relative;
     display: flex;
 }
 #food-menu {
     width: 25%;
     display: flex;
-    position: absolute;
+    position: fixed;
+    left: 10rem;
+    top: 6rem;
 }
 #foods-container {
     position: absolute;
     left: 18rem;
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -75,7 +81,7 @@
     z-index: 3;
 }
 #sidebar {
-    z-index: 2;
+    z-index: 9998;
 }
 #sidebar .list-group {
     min-width: 250px;
@@ -125,23 +131,19 @@
     padding-left: 20px;
 }
 
+@media screen and (max-width: 768px){
+    
+}
 @media (max-width: 768px) {
     #sidebar {
         min-width: 35px;
         max-width: 40px;
-        overflow-y: auto;
-        overflow-x: visible;
         transition: all 0.25s ease;
         transform: translateX(-45px);
-        position: fixed;
     }
 
     #sidebar.show {
         transform: translateX(0);
-    }
-
-    #sidebar::-webkit-scrollbar {
-        width: 0px;
     }
 
     #sidebar,

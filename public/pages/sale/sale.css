@@ -64,7 +64,7 @@
   
   .pro-image {
     overflow: hidden;
-    border-radius: 9999px;
+    border-radius: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,7 +239,7 @@
   }
   .deal-btn a{
     text-decoration: none;
-    color: var(--bg-color);}
+    color: var(--black);}
   
   .deal-btn:hover {
     transform: scale(0.8);
@@ -260,4 +260,29 @@
     color: var(--bg-color);
     border: none;
     border-radius: 5px;
+  }
+  @media screen and (max-width: 768px){
+    .slider {
+      width: 100%;
+    }
+    .slider-card-list {
+      width: 300%;
+    }
+    .card {
+      width: 40%;
+    }
+    .deal-list {
+      max-width: 100%;
+    }
+    .card {
+      margin: 0rem 1.5rem;
+      width: 100%;
+      max-height: 14rem;
+      aspect-ratio: 1.7;
+      overflow: hidden;
+      border: 1px solid var(--transparent-color);
+      border-radius: 24px;
+      padding: 10px 20px;
+     
+    }
   }

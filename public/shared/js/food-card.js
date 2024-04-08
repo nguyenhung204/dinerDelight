@@ -93,6 +93,7 @@ function renderCardSale(img,dname,fdate, ldate){
       </div>`;
   return dealString;
 }
+
 renderFoodCard();
 
 renderCardSale();
