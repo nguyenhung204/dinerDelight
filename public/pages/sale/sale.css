@@ -15,88 +15,89 @@
 }
   
 .slider {
-    margin: auto;
-    width: 65%;
-    height: 24rem;
-    overflow: hidden;
-  }
-  
-  .slider-card-list {
-    height: 80%;
-    width: 200%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .card {
-    margin: 0rem 1.5rem;
-    width: 30%;
-    max-height: 14rem;
-    aspect-ratio: 1.7;
-    overflow: hidden;
-    border: 1px solid var(--transparent-color);
-    border-radius: 24px;
-    padding: 1rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 1rem;
-    user-select: none;
-  }
-  
-  .info-card {
-    font-size: medium;
-    color: var(--primary-color);
-    font-weight: 600;
-    opacity: 0.8;
-  }
-  
-  .profile {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 100%;
-    gap: 1rem;
-  }
-  
-  .pro-image {
-    overflow: hidden;
-    border-radius: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    aspect-ratio: 1;
-    max-height: 6rem;
-  }
-  
-  .img-pro {
-    height: 100%;
-    background-size: contain;
-  }
-  
-  .per-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-  }
-  
-  .per-name {
-    font-weight: 700;
-    font-size: large;
-    color: var(--primary-color);
-  }
-  
-  .per-position {
-    font-size: smaller;
-    color: var(--primary-color);
-    font-weight: 500;
-    opacity: 0.9;
-  }
+    
+  margin-top: 3rem;
+  width: 100%;
+  height: 24rem;
+  overflow: hidden;
+}
+
+.slider-card-list {
+  height: 80%;
+  width: 200%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.card {
+  margin: 0rem 1.5rem;
+  width: 50%;
+  max-height: 14rem;
+  aspect-ratio: 1.7;
+  overflow: hidden;
+  border: 1px solid var(--transparent-color);
+  border-radius: 24px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  user-select: none;
+}
+
+.info-card {
+  font-size: smaller;
+  color: var(--primary-color);
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.profile {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.pro-image {
+  overflow: hidden;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  aspect-ratio: 1;
+  max-height: 6rem;
+}
+
+.img-pro {
+  height: 100%;
+  background-size: contain;
+}
+
+.per-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.per-name {
+  font-weight: 700;
+  font-size: large;
+  color: var(--primary-color);
+}
+
+.per-position {
+  font-size: smaller;
+  color: var(--primary-color);
+  font-weight: 500;
+  opacity: 0.9;
+}
   
   .dots {
     width: 100%;
