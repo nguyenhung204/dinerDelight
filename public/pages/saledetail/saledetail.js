@@ -1,7 +1,7 @@
-$(document).ready(function() {
-    var slideIndex = 0;
-    var totalSlides = $(".slider-card-list").length;
-    var totalSlides = Math.ceil(totalSlides / 2);
+$(document).ready(function () {
+  var slideIndex = 0;
+  var totalSlides = $(".slider-card-list").length;
+  var totalSlides = Math.ceil(totalSlides / 2);
 
   // Function to show current slide
   function showSlide(index) {
@@ -12,7 +12,7 @@ $(document).ready(function() {
 
   showSlide(slideIndex);
 
-  $(".dot").click(function() {
+  $(".dot").click(function () {
     slideIndex = parseInt($(this).attr("data-index"));
     showSlide(slideIndex);
   });
@@ -22,13 +22,13 @@ $(document).ready(function() {
   var isMouseDown = false;
 
   // Xử lý sự kiện swipe chuột
-  $(document).on("mousedown", ".slider", function(event) {
+  $(document).on("mousedown", ".slider", function (event) {
     startX = event.pageX;
     isMouseDown = true;
   });
 
   // Xử lý sự kiện di chuyển chuột
-  $(document).on("mousemove", function(event) {
+  $(document).on("mousemove", function (event) {
     if (isMouseDown) {
       var currentX = event.pageX;
       var diffX = startX - currentX;
@@ -36,13 +36,13 @@ $(document).ready(function() {
       if (Math.abs(diffX) > 10) { // Chỉ xử lý nếu sự di chuyển của chuột đủ lớn
         if (diffX > 50 && slideIndex < totalSlides) { // Swipe sang trái
           slideIndex++;
-            showSlide(slideIndex);
-            console.log("to trái", slideIndex);
+          showSlide(slideIndex);
+          console.log("to trái", slideIndex);
         } else if (diffX < 50 && slideIndex > 0) { // Swipe sang phải
           slideIndex--;
-            showSlide(slideIndex);
-            console.log("to phải", slideIndex);
-            
+          showSlide(slideIndex);
+          console.log("to phải", slideIndex);
+
         }
 
         startX = currentX; // Cập nhật vị trí bắt đầu cho lần di chuyển tiếp theo
@@ -51,7 +51,7 @@ $(document).ready(function() {
   });
 
   // Xử lý sự kiện thả chuột
-  $(document).on("mouseup", function() {
+  $(document).on("mouseup", function () {
     isMouseDown = false;
   });
 });
