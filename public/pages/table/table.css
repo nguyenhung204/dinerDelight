@@ -1,5 +1,5 @@
 .container{
-  margin-top: 7%;
+  margin-top: 5%;
   display: flex;
 }
 .card-map {
@@ -20,5 +20,5 @@
 }
 
 .modal {
-  margin-top: 3%;
+  margin-top: 2%;
 }

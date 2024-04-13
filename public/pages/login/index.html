@@ -33,20 +33,23 @@
     <div id="header"></div>
 
     <div class="container">
-      <form class="form" action="">
+      <form id="form-login" action="">
           <p class="title">Login</p>
           <input
+            id="username"
               placeholder="Username"
               class="username input"
               type="text"
           />
           <input
+              id="password"
               placeholder="Password"
               class="password input"
               type="password"
           />
+          <span id="err" class="form-text text-danger"></span>
           <button id="login" class="btn" type="submit">Login</button> 
-          <p class="p">Don't have an account? <span class="span">Sign Up</span></p>
+          <p class="p">Don't have an account? <span class="span"><a href="../sign_up/index.html">Sign Up</a></span></p>
 
          <p class="p line">Or With</p>
       

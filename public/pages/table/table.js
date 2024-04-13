@@ -27,17 +27,17 @@
   }
 });
 
-  $('#idCard').on('input', function checkIdCard() {
-    let idCard = $(this).val();
-    let idCardRegex = /^\d{12}$/;
-    if (!idCardRegex.test(idCard)) {
-      $("#cccdHelp").text("Mã căn cước không hợp lệ");
-      $('#confirmButton').prop('disabled', true);
-    }
-    else {
-      $("#cccdHelp").text("");
-    }
-  });
+  // $('#idCard').on('input', function checkIdCard() {
+  //   let idCard = $(this).val();
+  //   let idCardRegex = /^\d{12}$/;
+  //   if (!idCardRegex.test(idCard)) {
+  //     $("#cccdHelp").text("Mã căn cước không hợp lệ");
+  //     $('#confirmButton').prop('disabled', true);
+  //   }
+  //   else {
+  //     $("#cccdHelp").text("");
+  //   }
+  // });
 
   $('#phone').on('input', function checkPhoneNumber() {
   let phoneNumber = $(this).val();
@@ -85,9 +85,9 @@
     e.preventDefault();
     let name = $('#name').val(); console.log(name);
     let email = $('#email').val(); console.log(email);
-    let idCard = $('#idCard').val(); console.log(idCard);
+    // let idCard = $('#idCard').val(); console.log(idCard);
     let phoneNumber = $('#phone').val(); console.log(phoneNumber);
-    if(name == "" || email == "" || idCard == "" || phoneNumber == "") {
+    if(name == "" || email == ""|| phoneNumber == "") {
       alert("Vui lòng điền đầy đủ thông tin");
       return;
     }
@@ -99,12 +99,12 @@
     
         let name = $('#name').val();
         let email = $('#email').val(); 
-        let idCard = $('#idCard').val(); 
+        // let idCard = $('#idCard').val(); 
         let phoneNumber = $('#phone').val(); 
   
         $('.name_info').text('Họ và tên: ' + name);
         $('.email_info').text('Email: ' + email);
-        $('.cccd_info').text('Căn cước công dân: ' + idCard);
+        // $('.cccd_info').text('Căn cước công dân: ' + idCard);
         $('.phone_number_info').text('Số điện thoại: ' + phoneNumber);
         $('.table_info').text('Loại bàn: ' + $('input[name="table"]:checked').val());
         $('.message_info').text('Ghi chú: ' + $('#message').val());

@@ -7,7 +7,7 @@ body{
 }
 
 .container {
-    margin-top: 5%;
+    margin-top: 7%;
     position: relative;
     display: flex;
 }
@@ -15,7 +15,7 @@ body{
     width: 25%;
     display: flex;
     position: fixed;
-    left: 10rem;
+    left: 6rem;
     top: 6rem;
 }
 #foods-container {
@@ -80,9 +80,7 @@ body{
     transform: scale(1.1) rotate(0.5deg);
     z-index: 3;
 }
-#sidebar {
-    z-index: 9998;
-}
+
 #sidebar .list-group {
     min-width: 250px;
     background-color: #ffffff;
@@ -99,6 +97,14 @@ body{
     white-space: nowrap;
     list-style-type: none;
     cursor: pointer;
+}
+.list-group-item li {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 #sidebar .list-group-item:not(.collapsed) {
@@ -170,7 +176,7 @@ body{
     }
 }
 
-.collapse.show {
+/* .collapse.show {
     visibility: visible;
 }
 .collapsing {
@@ -188,6 +194,6 @@ body{
     height: 100%;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-}
+} */
 
 /* Path: public/pages/menu/menu.js */

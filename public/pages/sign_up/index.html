@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <title>Sign up</title>
+    <link rel="stylesheet" href="sign_up.css" />
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+    <link rel="stylesheet" href="../../shared/css/variables.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+     rel="stylesheet" 
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+     crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+   </head>
+  <body>
+  
+    <div id="header"></div>
+   <div class="container">
+    <form id="form-signup" action="">
+      <p class="title">Sign up</p>
+      <input required
+          id = "username"
+          placeholder="Username"
+          class="username input"
+          type="text"
+      />
+      <span class="text-danger form-text" id="us-err"></span>
+      <input required
+          id="email"
+          placeholder="Email"
+          class="email input"
+          type="email"
+      />
+      <span class="text-danger form-text" id="email-err"></span>
+      <input required
+          id="password"
+          placeholder="Password"
+          class="password input"
+          type="password"
+      />
+      <span class="text-danger form-text" id="pw-err"></span>
+      <input required
+          id="confirm-password"
+          placeholder="Confirm password"
+          class="confirm-password input"
+          type="password"
+      />
+      <span class="text-danger form-text" id="cpw-err"></span>
+      <button id="sign_up" class="btn btn-dark" type="submit">Sign up</button> 
+  </form>
+  </div>
+  <div id="footer"></div>
+  <script  src="sign_up.js"></script>
+  <script src="../../shared/js/food-card.js"></script>
+  <script src="../../shared/js/nav.js"></script>
+</body>
+</html>

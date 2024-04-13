@@ -9,13 +9,13 @@
 .container {
     height: 80vh;
     margin:auto;
-    margin-top: 5%;
+    margin: 8rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
 }
-#form-login {
+#form-signup {
     width: 50%;
     height: auto;
     background-image: linear-gradient(to bottom, #ffffffd7, #ffffff11);
@@ -50,87 +50,37 @@
     border: solid thin;
     border-radius: 0.5rem;
 }
-
 .btn {
     border: solid 1px;
     height: 3rem;
     width: 20rem;
-    margin-top: 3rem;
+    margin:3rem 0;
     border-radius: 0.5rem;
     font-size: 1.2rem;
     transition: all 400ms;
-}
-#login {
     font-size: 12pt;
-    background-color: var(--black);
     color: var(--white);
 }
-#login:hover {
+#sign_up:hover {
     background-color: var(--white);
     color: var(--black);
     border: solid 2px var(--blue-color) ;
     text-transform: uppercase;
-
-}
-.p {
-    text-align: center;
-    color: var(--black);
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.btn1 {
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    gap: 10px;
-    border: 1px solid var(--bg-color);
-    background-color:var(--white);
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    padding: 10px 40px;
-    margin-bottom: 20px;
-}
-
-.btn1:hover {
-    border: 2px solid var(--blue-color);
-}
-
-.flex-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.span {
-    font-size: 14px;
-    margin-left: 5px;
-    color: var(--blue-color);
-    font-weight: 500;
-    cursor: pointer;
 }
 @keyframes fadeIn {
-    0% {
-       transform: translateY(-300px);
-   }
-   25% {
-       transform: translateY(-150px);
-   }
-   50% {
-       transform: translateY(50px);
-   }
-   75% {
-       transform: translateY(25px);
-   }
-   100% {
-       transform: translateY(0);
-   }
+     0% {
+        transform: translateY(-300px);
+    }
+    25% {
+        transform: translateY(-150px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    75% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
-
-
