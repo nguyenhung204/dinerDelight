@@ -20,12 +20,22 @@ function login(e) {
     return;
   }
   else {
-    err.innerHTML = 'Welcome to my website';
-    //alert('Đăng nhập thành công');  
-    console.log(user);
-  }
 
-  window.location.href = '../home/index.html';
+    alert('Welcome to my website');  
+    console.log(user);
+    localStorage.setItem('currentUser', JSON.stringify(user));
+
+    window.location.href = '../home/index.html';
+    isLogin = true;
+      if(isLogin == true) {
+      document.querySelector('#login').style.display = 'none';
+      document.querySelector('#logout').style.display = 'block';
+      } 
+      else {
+      document.querySelector('#login').style.display = 'block';
+      document.querySelector('#logout').style.display = 'none';
+      }
+}
 }
 // Get the form element
 var form = document.querySelector('#form-login');
