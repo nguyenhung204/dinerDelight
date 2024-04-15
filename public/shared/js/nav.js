@@ -1,4 +1,6 @@
 let isLogin = false;
+
+//loading Pages
 function showLoading() {
   let element = document.getElementById("loading-panel");
   if (element) {
@@ -16,6 +18,8 @@ function renderLoading() {
   setTimeout(hideLoading, 500);
 }
 renderLoading();
+
+//navbar
 function renderNavBar() {
   const navBarStr = `
     <div class="wrapper">
@@ -81,7 +85,7 @@ function renderNavBar() {
     header.innerHTML = navBarStr;
   }
 }
-
+// navbar xử lý absolute menu
 const script = document.createElement('script');
 script.src = 'https://code.jquery.com/jquery-3.7.1.js';
 document.head.appendChild(script);
@@ -113,6 +117,63 @@ script.onload = function () {
   })
 }
 
+//slide
+$(document).ready(function () {
+  var slideIndex = 0;
+  var totalSlides = $(".slider-card-list").length;
+  var totalSlides = Math.ceil(totalSlides / 2);
+
+  // Function to show current slide
+  function showSlide(index) {
+    $(".slider-card-list").css("transform", "translateX(-" + (index * 25) + "%)");
+    $(".dot").removeClass("active");
+    $(".dot[data-index='" + index + "']").addClass("active");
+  }
+  showSlide(slideIndex);
+
+  $(".dot").click(function () {
+    slideIndex = parseInt($(this).attr("data-index"));
+    showSlide(slideIndex);
+  });
+
+  // Biến để theo dõi sự di chuyển của chuột
+  var startX;
+  var isMouseDown = false;
+
+  // Xử lý sự kiện swipe chuột
+  $(document).on("mousedown", ".slider", function (event) {
+    startX = event.pageX;
+    isMouseDown = true;
+  });
+
+  // Xử lý sự kiện di chuyển chuột
+  $(document).on("mousemove", function (event) {
+    if (isMouseDown) {
+      var currentX = event.pageX;
+      var diffX = startX - currentX;
+
+      if (Math.abs(diffX) > 10) { // Chỉ xử lý nếu sự di chuyển của chuột đủ lớn
+        if (diffX > 50 && slideIndex < totalSlides) { // Swipe sang trái
+          slideIndex++;
+          showSlide(slideIndex);
+          console.log("to trái", slideIndex);
+        } else if (diffX < 50 && slideIndex > 0) { // Swipe sang phải
+          slideIndex--;
+          showSlide(slideIndex);
+          console.log("to phải", slideIndex);
+
+        }
+
+        startX = currentX; // Cập nhật vị trí bắt đầu cho lần di chuyển tiếp theo
+      }
+    }
+  });
+  // Xử lý sự kiện thả chuột
+  $(document).on("mouseup", function () {
+    isMouseDown = false;
+  });
+});
+// menu thức ăn
 function renderMenu() {
   const menuStr = `
     <div class="container-fluid">
@@ -142,9 +203,8 @@ function renderMenu() {
   if (menu) {
     menu.innerHTML = menuStr;
   }
-
-
 }
+//footer
 function footer() {
   const footerStr = ` <footer class="footer">
         <div class="footer__content">
@@ -163,19 +223,19 @@ function footer() {
   if (footer) {
     footer.innerHTML = footerStr;
   }
-
 }
 renderNavBar();
 renderMenu();
 footer();
-localStorage.setItem('needTestLogin', 'true');
+
+//login
+ localStorage.setItem('needTestLogin', 'true');
 if(localStorage.getItem('currentUser')) {
   isLogin = true;
 }
 else {
   isLogin = false;
 }
-
 function testLogin() {
   console.log(isLogin);
   if (isLogin === true) {
@@ -188,6 +248,7 @@ function testLogin() {
   }
 }
 testLogin();
+
 $('#logout').click(() => {
   localStorage.removeItem('currentUser');
   if(localStorage.removeItem('currentUser')) {
@@ -197,6 +258,22 @@ $('#logout').click(() => {
   alert('Đăng xuất thành công');
   window.location.href = '../../pages/home/index.html';
 });
+
+//coupon
+$(document).ready(() => {
+  $('#coupon').click(() => { 
+    if(isLogin === false) {
+      localStorage.setItem('needTestLogin', 'true');
+      alert('Vui lòng đăng nhập để nhận mã');
+      window.location.href = "../../pages/login/index.html";
+    }
+    else
+    {
+      alert('Mã đã được gửi vào email của bạn');
+    }
+  })
+  });
+
 
 
 

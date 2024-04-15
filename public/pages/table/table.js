@@ -1,9 +1,19 @@
-window.onload = function() {
+window.onload = function () {
   if (localStorage.getItem('needTestLogin') === 'true') {
     testLogin();
-    localStorage.removeItem('needTestLogin'); 
+    localStorage.removeItem('needTestLogin');
   }
 };
+
+$('#test').on('click', function (e) {
+  if (isLogin === false) {
+    localStorage.setItem('needTestLogin', 'true');
+    window.location.href = "../login/index.html";
+    alert('Vui lòng đăng nhập để đặt bàn');
+    return;
+  }
+});
+
 
 // Initiate the table with the following code in the HTML file
 $('#name').on('blur', function checkName() {
@@ -93,6 +103,7 @@ $(document).ready(function () {
 });
 $('#confirm-table').on('click', function (e) {
   e.preventDefault();
+  alert('Đặt bàn thành công');
   window.location.href = "../home/index.html";
 });
 
