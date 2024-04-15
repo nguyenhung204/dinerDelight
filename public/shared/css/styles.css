@@ -217,6 +217,9 @@
   .submenu-list {
     display: none;
   }
+  .logout{
+    display: none;
+  }
   
   /* card sale styles */
   
