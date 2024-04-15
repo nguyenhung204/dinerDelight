@@ -1,4 +1,4 @@
-const isLogin = false;
+
 
 function renderFoodCard(name, price, img) {
   const foodCard = `<div class="card" style="width: 18rem;">

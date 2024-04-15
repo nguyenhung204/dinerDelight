@@ -1,3 +1,9 @@
+window.onload = function() {
+  if (localStorage.getItem('needTestLogin') === 'true') {
+    testLogin();
+    localStorage.removeItem('needTestLogin'); 
+  }
+};
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 
 const firebaseConfig = {

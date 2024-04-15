@@ -1,3 +1,10 @@
+window.onload = function() {
+  if (localStorage.getItem('needTestLogin') === 'true') {
+    testLogin();
+    localStorage.removeItem('needTestLogin'); 
+  }
+};
+
 // Initiate the table with the following code in the HTML file
 $('#name').on('blur', function checkName() {
   let name = $(this).val();

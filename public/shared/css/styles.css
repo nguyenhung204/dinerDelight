@@ -30,8 +30,13 @@
     padding: 1rem 8rem 1rem 8rem;
     max-height: 5rem;
     z-index: 9998;
-    box-shadow: -3px 0px 3px 3px var(--black);
+    box-shadow: -2px 0px 2px 2px rgb(187, 185, 185);
     background-color: var(--white-color);
+  }
+  .nav-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .nav-list {
@@ -74,10 +79,11 @@
   }
   
   .i-name {
+    margin: 0;
     color: var(--primary-color);
     font-weight: 700;
-    font-size: 1.24em;
-    letter-spacing: -0.025rem;
+    font-size: 1.03em;
+    letter-spacing: 0.025rem;
     transition: cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s;
   }
   
@@ -217,7 +223,7 @@
   .submenu-list {
     display: none;
   }
-  .logout{
+  #logout{
     display: none;
   }
   
@@ -322,7 +328,7 @@
   box-sizing: border-box;
 }
 .container-spinner{
-  z-index: 10000;
+    z-index: 10000;
     position: absolute;
     top: 0;
     left: 0;

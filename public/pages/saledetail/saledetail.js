@@ -1,3 +1,9 @@
+window.onload = function() {
+  if (localStorage.getItem('needTestLogin') === 'true') {
+    testLogin();
+    localStorage.removeItem('needTestLogin'); 
+  }
+};
 $(document).ready(function () {
   var slideIndex = 0;
   var totalSlides = $(".slider-card-list").length;
