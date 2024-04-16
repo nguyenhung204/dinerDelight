@@ -58,14 +58,28 @@ function Sign_up(e) {
 
     username: username,
 
+    email: email,
+
     password: password,
 
     confirm: confirm
 
   }
-  var data = JSON.stringify(user)
+  
+  var header = {alg: "HS256", typ: "JWT"};
+  var payload = {
+    username: username,
+    password: password,
+    email: email,
+    confirm: confirm
+  };
+  var secret = "diner-sign-up-key";
+  var sHeader = JSON.stringify(header);
+  var sPayload = JSON.stringify(payload);
+  var sJWT = KJUR.jws.JWS.sign("HS256", sHeader, sPayload, {utf8: secret});
+  console.log(sJWT);
 
-  localStorage.setItem(username, data)
+  localStorage.setItem("jwt", sJWT);
 
   alert('Đăng ký thành công')
   window.location.href = '../login/index.html';

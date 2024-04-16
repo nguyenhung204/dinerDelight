@@ -44,27 +44,22 @@
           tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalToggleLabel">Đặt Bàn</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="modal-header p-2">
+                <h5 class="modal-title m-2" id="exampleModalToggleLabel">Đặt Bàn</h5>
+                <button type="button" class="btn-close m-2" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <form id="post" action="">
-                <div class="modal-body">
+                <div class="modal-body modal-dialog-scrollable">
                   <div class="mb">
                     <label for="name" class="form-label">Họ và tên</label>
                     <input type="text" class="form-control" id="name" placeholder="Nhập tên của bạn">
                     <small id="nameHelp" class="form-text text-danger"></small>
                   </div>
-                  <!-- <div class="mb">
-                      <label for="idCard" class="form-label">Căn cước công dân</label>
-                      <input type="text" class="form-control" id="idCard" placeholder="Nhập mã căn cước của bạn">
-                      <small id="cccdHelp" class="form-text text-danger"></small>
-                    </div> -->
                   <div class="mb">
-                    <label for="phone" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Nhập email của bạn">
-                    <small id="emailHelp" class="form-text text-danger"></small>
-                  </div>
+                    <label for="time" class="form-label">Thời gian</label>
+                    <input type="text" class="form-control" id="time" placeholder="00:00">
+                    <small id="timeHelp" class="form-text text-danger"></small>
+                </div>
                   <div class="mb">
                     <label for="phone" class="form-label">Số điện thoại</label>
                     <input type="text" class="form-control" id="phone" placeholder="Nhập số điện thoại của bạn">
@@ -97,7 +92,8 @@
                     <small id="agreeHelp" class="form-text text-danger"></small>
                   </div>
                 </div>
-                <div class="modal-footer">
+
+                <div class="modal-footer p-1 m-2">
                   <button type="reset" class="btn btn-dark">Đặt lại</button>
                   <button disabled id="confirmButton" type="submit" class="btn btn-dark" data-bs-toggle="modal"
                     data-bs-target="#exampleModalToggle2" data-bs-dismiss="modal">Xác nhận</button>
@@ -119,8 +115,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Thông tin của bạn</h5>
                     <p class="card-text name_info"></p>
-                    <p class="card-text cccd_info"></p>
-                    <p class="card-text email_info"></p>
+                    <p class="card-text time_info"></p>
                     <p class="card-text phone_number_info"></p>
                     <p class="card-text table_info"> </p>
                     <p class="card-text message_info"></p>

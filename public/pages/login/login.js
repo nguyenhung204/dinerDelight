@@ -10,20 +10,33 @@ function login(e) {
     err.innerHTML = 'Vui lòng nhập đầy đủ thông tin';
     return;
   }
-  let data = localStorage.getItem(username);
-  var user = JSON.parse(data);
-  if (user == null) {
+  let data = localStorage.getItem('jwt');
+  if (!data) {
     err.innerHTML = 'Tài khoản không tồn tại';
     return;
   }
-  if (user.password !== password) {
-    err.innerHTML = 'Mật khẩu không chính xác';
-    return;
-  }
-  
+   // Decode the JWT
+   var payload = KJUR.jws.JWS.readSafeJSONString(b64utoutf8(data.split(".")[1]));
+
+   // Check if the username and password match the ones in the JWT
+   if (payload.username !== username || payload.password !== password) {
+     err.innerHTML = 'Tên đăng nhập hoặc mật khẩu không chính xác';
+     return;
+   }
   alert('Welcome to my website');  
-  console.log(user);
-  localStorage.setItem('currentUser', JSON.stringify(user));
+  localStorage.setItem('needTestLogin', 'true');
+
+  var header = {alg: "HS256", typ: "JWT"};
+  var payload = {
+    username: username,
+    password: password,
+  };
+  var secret = "diner-login-key";
+  var sHeader = JSON.stringify(header);
+  var sPayload = JSON.stringify(payload);
+  var sJWT = KJUR.jws.JWS.sign("HS256", sHeader, sPayload, {utf8: secret});
+
+  localStorage.setItem('currentUser', sJWT);
   window.location.href = '../home/index.html';
 }
 // Get the form element

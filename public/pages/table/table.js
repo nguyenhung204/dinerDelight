@@ -39,17 +39,17 @@ $('#email').on('blur', function checkEmail() {
   }
 });
 
-// $('#idCard').on('input', function checkIdCard() {
-//   let idCard = $(this).val();
-//   let idCardRegex = /^\d{12}$/;
-//   if (!idCardRegex.test(idCard)) {
-//     $("#cccdHelp").text("Mã căn cước không hợp lệ");
-//     $('#confirmButton').prop('disabled', true);
-//   }
-//   else {
-//     $("#cccdHelp").text("");
-//   }
-// });
+$('#time').on('blur', function checkTime() {
+
+  let time = $(this).val();
+  let timeRegex = /^(0|[8-9]|0\d|2[0-2]):([0-5]\d)$/;
+  if (!timeRegex.test(time)) {
+    $("#timeHelp").text("Vui lòng nhập thời gian trong khoảng 08:00 AM - 22:00 PM");
+  }
+  else {
+    $("#timeHelp").text("");
+  }
+});
 
 $('#phone').on('blur', function checkPhoneNumber() {
   let phoneNumber = $(this).val();
@@ -88,13 +88,11 @@ $(document).ready(function () {
     e.preventDefault();
 
     let name = $('#name').val();
-    let email = $('#email').val();
-    // let idCard = $('#idCard').val(); 
+    let time = $('#time').val();
     let phoneNumber = $('#phone').val();
 
     $('.name_info').text('Họ và tên: ' + name);
-    $('.email_info').text('Email: ' + email);
-    // $('.cccd_info').text('Căn cước công dân: ' + idCard);
+    $('.time_info').text('Thời gian: ' + time);
     $('.phone_number_info').text('Số điện thoại: ' + phoneNumber);
     $('.table_info').text('Loại bàn: ' + $('input[name="table"]:checked').val());
     $('.message_info').text('Ghi chú: ' + $('#message').val());

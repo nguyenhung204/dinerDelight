@@ -2,6 +2,8 @@
   "type": "module",
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.6",
-    "firebase": "^10.9.0"
+    "firebase": "^10.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "jsrsasign": "^11.1.0"
   }
 }
