@@ -1,13 +1,15 @@
-$(document).ready(function () {
+$(document).ready(function Validate () {
   // Username validation
   $('#username').on('blur', function () {
     var username = $(this).val();
     var regex = /^[a-zA-Z0-9]+$/;
     if (!regex.test(username)) {
       $('#us-err').text('Tên người dùng chỉ có thể chứa các ký tự chữ và số.');
-    } else {
+    }
+    else {
       $('#us-err').text('');
     }
+    
   });
 
   // Email validation
@@ -16,7 +18,8 @@ $(document).ready(function () {
     var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!regex.test(email)) {
       $('#email-err').text('Vui lòng nhập một địa chỉ email hợp lệ.');
-    } else {
+    }
+    else {
       $('#email-err').text('');
     }
   });
@@ -44,33 +47,16 @@ $(document).ready(function () {
   });
 });
 
+
 function Sign_up(e) {
 
   e.preventDefault();
 
   var username = document.getElementById('username').value;
-
+  var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
-
   var confirm = document.getElementById('confirm-password').value;
 
-  const user = {
-
-    username: username,
-
-    email: email,
-
-    password: password,
-
-    confirm: confirm
-
-  };
-  if(user.username == username){
-    $('#us-err').text('Tên người dùng đã được sử dụng');
-  }
-  if(user.email == email){
-    $('#email-err').text('Email đã được sử dụng');
-  }
   var header = {alg: "HS256", typ: "JWT"};
   var payload = {
     username: username,
@@ -84,10 +70,17 @@ function Sign_up(e) {
   var sJWT = KJUR.jws.JWS.sign("HS256", sHeader, sPayload, {utf8: secret});
   console.log(sJWT);
 
-  localStorage.setItem("jwt", sJWT);
-
-  alert('Đăng ký thành công')
-  window.location.href = '../login/index.html';
+  if (localStorage.getItem(username) ) {
+    alert('Tên người dùng đã được sử dụng');
+    Validate();
+    return;
+  }
+  else{
+    localStorage.setItem(username, sJWT);
+    alert('Đăng ký thành công')
+    window.location.href = '../login/index.html';
+  }
+  
 }
 
 

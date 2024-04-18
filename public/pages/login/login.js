@@ -10,7 +10,7 @@ function login(e) {
     err.innerHTML = 'Vui lòng nhập đầy đủ thông tin';
     return;
   }
-  let data = localStorage.getItem('jwt');
+  let data = localStorage.getItem(username);
   if (!data) {
     err.innerHTML = 'Tài khoản không tồn tại';
     return;
