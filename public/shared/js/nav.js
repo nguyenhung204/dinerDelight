@@ -60,6 +60,7 @@ function renderNavBar() {
       <a class="nav-list" href="../../pages/home/index.html"><img src="../../assets/hunglogo.png" alt="image" class="logo"/></a>
       </div>
       <div class="menu-list" id="menu-list">
+        <a href="../../pages/home/index.html" class="menu-item"> <p class="i-name">Trang chủ</p></a>
         <a href="../../pages/sale/index.html" class="menu-item"> <p class="i-name">Ưu đãi</p></a>
         <a href="../../pages/menu/index.html" class="menu-item"> <p class="i-name">Thực đơn</p> </a>
         <a href="../../pages/table/index.html" class="menu-item"> <p class="i-name">Đặt bàn</p> </a>

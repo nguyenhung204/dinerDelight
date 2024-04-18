@@ -101,6 +101,7 @@ $(document).ready(function () {
 });
 $('#confirm-table').on('click', function (e) {
   e.preventDefault();
+
   alert('Đặt bàn thành công');
   window.location.href = "../home/index.html";
 });
