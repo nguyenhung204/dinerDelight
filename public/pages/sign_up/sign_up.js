@@ -64,8 +64,13 @@ function Sign_up(e) {
 
     confirm: confirm
 
+  };
+  if(user.username == username){
+    $('#us-err').text('Tên người dùng đã được sử dụng');
   }
-  
+  if(user.email == email){
+    $('#email-err').text('Email đã được sử dụng');
+  }
   var header = {alg: "HS256", typ: "JWT"};
   var payload = {
     username: username,
@@ -84,6 +89,8 @@ function Sign_up(e) {
   alert('Đăng ký thành công')
   window.location.href = '../login/index.html';
 }
+
+
 form_signup = document.querySelector('#form-signup');
 form_signup.addEventListener('submit', Sign_up);
 
