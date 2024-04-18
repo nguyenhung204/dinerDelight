@@ -1,5 +1,5 @@
-let isLogin = false;
 
+let isLogin = false;
 //loading Pages
 function showLoading() {
   let element = document.getElementById("loading-panel");
